@@ -1,0 +1,22 @@
+.container {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  letter-spacing: -.01em;
+  font-size: 1.3225rem;
+  padding: 1.5em;
+}
+
+.intro .container {
+  padding-top: 0;
+  padding-bottom: 0;
+  position: relative;
+}
+
+@media (min-width: 1440px){
+  .container {
+    font-size: 5.35025rem;
+    max-width: 1440px;
+  }
+}

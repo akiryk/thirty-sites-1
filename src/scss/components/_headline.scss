@@ -1,0 +1,49 @@
+.headline-wrapper {
+  position: relative;
+}
+
+.headline {
+  color: white;
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 320px;
+  text-shadow: -5px 5px 12px rgba(0,0,0,0.4);
+  margin: 0;
+}
+
+.headline--guide {
+  visibility: hidden;
+  // transform: translate(-50%, -50%);
+  // position: absolute;
+  // z-index: 2;
+  // left: 50%;
+  // top: 50%;
+}
+
+.headline--top,
+.headline--bottom {
+  position: absolute;
+  width: 100%;
+  height: 56%;
+  left: 0;
+  z-index: 40;
+  overflow-x: visible;
+  overflow-y: hidden;
+  will-change: transform;
+}
+
+.headline--top {
+  top: -4%;
+  // transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+.headline--bottom {
+  top: 51.85%;
+  span {
+    display: block;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
