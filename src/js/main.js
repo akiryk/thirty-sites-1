@@ -155,6 +155,7 @@ const app = {
       if (cloneY <= startY){
         TweenMax.set('#head1-wrapper', {rotation: 0});
         TweenMax.set(top, {x: 0});
+        TweenMax.set(bottom, {x: 0});
         window.scroll(startY - cloneY,0);
       }
     });
@@ -163,6 +164,9 @@ const app = {
       duration: dur,
     })
       .setTween('#head1-wrapper', 1, {rotation: 20})
+      .on('update', function(evt){
+        console.log(controller.info("scrollDirection"));
+      })
       .addTo(controller);
 
     const startTitleTop = new ScrollMagic.Scene({
