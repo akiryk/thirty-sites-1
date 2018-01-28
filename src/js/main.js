@@ -1,7 +1,7 @@
 const scrollScripts = {
 
   init() {
-    this.scrollContent = document.querySelector('.scroll-content');
+    t``
     // this.watchScrolling();
     this.initScrollMagic();
   },
@@ -141,14 +141,14 @@ const bgAnimation = {
     const centerStageY = app.renderer.screen.height/2;
 
     // Images
-    const mainSprite = new PIXI.Sprite(resources.sprite.texture);
-    mainSprite.anchor.set(.5);
-    mainSprite.position.set(centerStageX, centerStageY);
+    const sprite = new PIXI.Sprite(resources.sprite.texture);
+    sprite.anchor.set(.5);
+    sprite.position.set(centerStageX, centerStageY);
     const filterImg = new PIXI.Sprite(resources.filter.texture);
     filterImg.anchor.set(.5);
     filterImg.position.set(centerStageX, centerStageY);
 
-    const spriteRightBound = centerStageX + mainSprite.width/2;
+    const spriteRightBound = centerStageX + sprite.width/2;
 
     // Filters
     // const disFilter = new filters.DisplacementFilter(filterImg);
@@ -158,7 +158,7 @@ const bgAnimation = {
     stage.filters = [this.displacementFilter];
 
     // Add Images
-    stage.addChild(mainSprite);
+    stage.addChild(sprite);
     stage.addChild(filterImg);
 
     app.ticker.add(delta => gameloop(delta));

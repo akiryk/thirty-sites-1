@@ -42,6 +42,7 @@ gulp.task('sass', function() {
 gulp.task('scripts', () =>
   gulp.src([
     'src/js/vendors/gsap/TweenMax.min.js',
+    'src/js/vendors/gsap/TimelineMax.min.js',
     'src/js/vendors/ScrollMagic/ScrollMagic.min.js',
     'src/js/vendors/ScrollMagic/animation.gsap.min.js',
   ])

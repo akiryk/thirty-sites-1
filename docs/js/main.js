@@ -121,14 +121,14 @@ var bgAnimation = {
     var centerStageY = app.renderer.screen.height / 2;
 
     // Images
-    var mainSprite = new PIXI.Sprite(resources.sprite.texture);
-    mainSprite.anchor.set(.5);
-    mainSprite.position.set(centerStageX, centerStageY);
+    var sprite = new PIXI.Sprite(resources.sprite.texture);
+    sprite.anchor.set(.5);
+    sprite.position.set(centerStageX, centerStageY);
     var filterImg = new PIXI.Sprite(resources.filter.texture);
     filterImg.anchor.set(.5);
     filterImg.position.set(centerStageX, centerStageY);
 
-    var spriteRightBound = centerStageX + mainSprite.width / 2;
+    var spriteRightBound = centerStageX + sprite.width / 2;
 
     // Filters
     // const disFilter = new filters.DisplacementFilter(filterImg);
@@ -138,7 +138,7 @@ var bgAnimation = {
     stage.filters = [this.displacementFilter];
 
     // Add Images
-    stage.addChild(mainSprite);
+    stage.addChild(sprite);
     stage.addChild(filterImg);
 
     app.ticker.add(function (delta) {
