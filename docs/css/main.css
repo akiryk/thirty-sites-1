@@ -641,6 +641,14 @@ a:hover {
   clip-path: unset;
 }
 
+.intro--clone {
+  padding-bottom: 300px;
+}
+
+.end-fill {
+  height: 200px;
+}
+
 footer {
   background: #222;
   height: 300px;
