@@ -10,7 +10,8 @@
         APPBGCOLOR  = 0x000000;
 
   const removeLoader = () => {
-    document.body.classList.add('remove-loader');
+    document.body.classList.add('ready');
+    console.log('no, right')
   }
 
   const App = {
@@ -32,7 +33,7 @@
         transparent: false,
         antialias: false,
       });
-      document.getElementById('display').appendChild(this.pixiApp.view);
+      document.getElementById('pixiContainer').appendChild(this.pixiApp.view);
     },
 
     /**
@@ -102,12 +103,51 @@
     initScrollMagic() {
       this.makeController();
       this.makeHeaderScenes();
+      this.makeEndScene();
       this.makeParagraphScenes();
       this.makeDisplacementAnimationScene();
     },
 
     makeController() {
       this.controller = new ScrollMagic.Controller();
+    },
+
+    makeEndScene() {
+      const controller = this.controller;
+      const top = document.getElementById('introHeadClone').querySelector('.end-headline--top');
+      const bottom = document.getElementById('introHeadClone').querySelector('.end-headline--bottom');
+      const outro = document.querySelector('.intro--clone');
+      const topTween = TweenLite.from(top, 1, {x: -300});
+      const bottomTween = TweenLite.from(bottom, 1, {x: 60});
+      const duration = .5 * window.innerHeight;
+      TweenLite.set('#introHeadClone', {rotation: -20});
+
+      new ScrollMagic.Scene({
+        duration: duration,
+        triggerElement: outro,
+        triggerHook: .5,
+      })
+        .setTween('#introHeadClone', 1, {rotation: 0})
+        .on('end', (e) => {
+          outro.classList.toggle('active');
+        })
+        .addTo(controller);
+
+      new ScrollMagic.Scene({
+        duration: duration,
+        triggerElement: outro,
+        triggerHook: .5,
+      })
+        .setTween(topTween)
+        .addTo(controller);
+
+     new ScrollMagic.Scene({
+        duration: duration,
+        triggerElement: outro,
+        triggerHook: .5,
+      })
+        .setTween(bottomTween)
+        .addTo(controller);
     },
 
     makeHeaderScenes() {

@@ -1,66 +1,10 @@
-// .loader-bg {
-//   position: fixed;
-//   width: 100%;
-//   height: 100vh;
-//   top: 0;
-//   z-index: 9;
-//   background: rgba(0,0,0, 0.7);
-//   // background-image: linear-gradient(#ff660c, #ffe000);
-// }
+// Inline at top of index file so don't use this.
 
-// .loader {
-//   position: absolute;
-//   z-index: 10;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-// }
-// .svg {
-//   background-color:transparent;
-//   position: absolute;
-//   left: 50%;
-//   top: 50%;
-//   transform: translate(-50%, -50%);
-//   width: 150px;
-//   height: 150px;
-// }
-
-// .path {
-// /*   stroke-dasharray: 0, 190; */
-
-//   stroke-dashoffset: 0;
-//   stroke-dasharray: 170, 190;
-
-//   fill: none;
-//   stroke-width: 7px;
-//   stroke-position: inner;
-//   stroke-linecap: round;
-//   animation: simple 1.75s infinite;
-//   animation: dasharrays 1.2s infinite;
-//   animation-direction: forwards;
-//   animation-timing-function: cubic-bezier(.61,.12,.5, 1);
-// /*   animation-timing-function: cubic-bezier(.3,.71,.46,.98); */
-// /*   animation-timing-function: cubic-bezier(.51,.06,.97,.79); */
-//   animation-fill-mode: forwards;
-// /*   transform: rotate(-90deg); */
-//   transform-origin: 50px 50px;
-//   position: absolute;
-// }
-
-// @keyframes simple {
-//   0% {
-//     stroke-dashoffset: 0;
-//     stroke-dasharray: 0, 190;
-//     transform: rotate(0deg);
-//   }
-//   50% {
-//     stroke-dashoffset: 0;
-//     stroke-dasharray: 185, 190;
-//     transform: rotate(180deg);
-//   }
-//   100%{
-//     stroke-dashoffset: -185;
-//     stroke-dasharray: 5, 190;
-//     transform: rotate(360deg);
-//   }
-// }
+// Fade in main content once loader is removed
+.ready .main {
+  opacity: 1.0;
+}
+.main {
+  transition: opacity 1s;
+  opacity: 0.0;
+}

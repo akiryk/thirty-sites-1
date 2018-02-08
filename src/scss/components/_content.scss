@@ -3,9 +3,18 @@ $skewX1: .3;
 $scaleX1: .98;
 $scaleY1: .98;
 
+.copy {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  padding: 0 3.5em;
+}
+
 .para {
   color: white;
   transform: matrix($scaleX1, $skewY1, $skewX1, $scaleY1, 0, 0);
-  font-family: 'SuisseMedium', serif;
-  font-family: 'SuisseBold', serif;
+  font-family: $sans-serif;
 }

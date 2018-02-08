@@ -1,0 +1,30 @@
+.container--end {
+  overflow: hidden;
+}
+
+.end-headlines {
+  margin-bottom: 75vh;
+  height: 100%;
+}
+
+.end-headline--top,
+.end-headline--bottom {
+  position: absolute;
+  width: 100%;
+}
+
+.end-headline--top {
+  clip-path: inset(0 0 50% 0);
+}
+
+.end-headline--bottom {
+  clip-path: inset(50% 0 0 0);
+}
+
+.active .end-headline--top {
+  visibility: hidden;
+}
+
+.active .end-headline--bottom {
+  clip-path: unset;
+}

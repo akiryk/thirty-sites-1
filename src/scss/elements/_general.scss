@@ -1,8 +1,21 @@
+html {
+  font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+}
+
+body {
+  background-color: $bg;
+}
+
 p {
   padding-top: 1.5em;
   padding-bottom: 1.5em;
+  font-size: 3em;
 }
 
 a {
   color: #fff;
+}
+
+a:hover {
+  color: $primary;
 }

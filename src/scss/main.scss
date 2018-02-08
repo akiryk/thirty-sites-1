@@ -1,4 +1,5 @@
-@import 'settings/z-index-layers';
+@import 'settings/variables';
+
 @import 'general/fonts';
 // tools
 
@@ -9,88 +10,12 @@
 
 // objects
 
+@import 'components/page-layout';
 @import 'components/container';
 @import 'components/headline';
 @import 'components/content';
-@import 'components/loader';
+@import 'components/pixi-container';
+@import 'components/header';
+@import 'components/end-headlines';
+@import 'components/footer';
 
-// trumps
-
-body {
-  background-color: #000;
-  // height: 100vh;
-  // overflow-y: hidden;
-}
-
-.main {
-  width: 100%;
-  height: 100vh;
-  // overflow: hidden;
-  position: relative;
-  z-index: $global3;
-}
-
-.header,
-.footer {
-  width: 100%;
-  position: fixed;
-  display: flex;
-  backface-visibility: hidden;
-  justify-content: center;
-  left: 0;
-  right: 0;
-  text-align: center;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  z-index: $global-top;
-}
-
-.footer {
-  bottom: 0;
-}
-
-.intro {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  z-index: 1;
-}
-
-.copy {
-  color: #fff;
-  display: flex;
-  align-items: center;
-  position: relative;
-  z-index: 1;
-}
-
-.display {
-  position: fixed;
-  z-index: $global2;
-  transform: translate3d(-50%, -50%, 0);
-  left: 50%;
-  top: 40%;
-}
-
-// canvas {
-//   transform: translate(-50%, -50%);
-//   position: absolute;
-//   left: 50%;
-//   top: 50%;
-// }
-
-.scroll-content {
-  overflow-x: hidden;
-  transform: translate3d(0, 0, 0);
-}
-
-.remove-loader .main {
-  opacity: 1.0;
-}
-.main {
-  transition: opacity 1s;
-  opacity: 0.0;
-}
