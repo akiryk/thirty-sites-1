@@ -1,22 +1,22 @@
 .headline-wrapper {
   position: relative;
+  top: 8rem;
 }
 
 .headline {
-  color: white;
-  font-family: 'UnifrakturCook', cursive;
-  font-size: 320px;
+  color: #ffd403;
+  font-family:'Fraktur', 'UnifrakturCook', cursive;
+  font-size: 5em;
   text-shadow: -5px 5px 12px rgba(0,0,0,0.4);
   margin: 0;
 }
 
 .headline--guide {
   visibility: hidden;
-  // transform: translate(-50%, -50%);
-  // position: absolute;
-  // z-index: 2;
-  // left: 50%;
-  // top: 50%;
+
+  &::after {
+    content: 'A';
+  }
 }
 
 .headline--top,
@@ -26,7 +26,7 @@
   height: 56%;
   left: 0;
   z-index: 40;
-  overflow-x: visible;
+  overflow-x: hidden;
   overflow-y: hidden;
   will-change: transform;
 }

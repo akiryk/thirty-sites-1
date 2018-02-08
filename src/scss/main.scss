@@ -1,17 +1,18 @@
 @import 'settings/z-index-layers';
-
+@import 'general/fonts';
 // tools
 
 @import 'general/normalize';
 @import 'general/box-sizing';
 
-@import 'elements/paragraph';
+@import 'elements/general';
 
 // objects
 
 @import 'components/container';
 @import 'components/headline';
 @import 'components/content';
+@import 'components/loader';
 
 // trumps
 
@@ -71,7 +72,7 @@ body {
   z-index: $global2;
   transform: translate3d(-50%, -50%, 0);
   left: 50%;
-  top: 50%;
+  top: 40%;
 }
 
 // canvas {
@@ -86,3 +87,10 @@ body {
   transform: translate3d(0, 0, 0);
 }
 
+.remove-loader .main {
+  opacity: 1.0;
+}
+.main {
+  transition: opacity 1s;
+  opacity: 0.0;
+}

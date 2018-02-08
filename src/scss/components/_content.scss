@@ -1,3 +1,11 @@
+$skewY1: -.3;
+$skewX1: .3;
+$scaleX1: .98;
+$scaleY1: .98;
+
 .para {
-  transform: translate(2.95443%, 0%) matrix(0.96643, -0.25689, 0.25689, 0.96643, 0, 0);
+  color: white;
+  transform: matrix($scaleX1, $skewY1, $skewX1, $scaleY1, 0, 0);
+  font-family: 'SuisseMedium', serif;
+  font-family: 'SuisseBold', serif;
 }
