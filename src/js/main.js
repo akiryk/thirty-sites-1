@@ -119,13 +119,14 @@
       const outro = document.querySelector('.intro--clone');
       const topTween = TweenLite.from(top, 1, {x: -300});
       const bottomTween = TweenLite.from(bottom, 1, {x: 60});
-      const duration = .5 * window.innerHeight;
+      const duration = .6 * window.innerHeight;
+
       TweenLite.set('#introHeadClone', {rotation: -20});
 
       new ScrollMagic.Scene({
         duration: duration,
         triggerElement: outro,
-        triggerHook: .5,
+        triggerHook: .4,
       })
         .setTween('#introHeadClone', 1, {rotation: 0})
         .on('end', (e) => {
@@ -136,7 +137,7 @@
       new ScrollMagic.Scene({
         duration: duration,
         triggerElement: outro,
-        triggerHook: .5,
+        triggerHook: .4,
       })
         .setTween(topTween)
         .addTo(controller);
@@ -144,7 +145,7 @@
      new ScrollMagic.Scene({
         duration: duration,
         triggerElement: outro,
-        triggerHook: .5,
+        triggerHook: .4,
       })
         .setTween(bottomTween)
         .addTo(controller);
